@@ -1,111 +1,30 @@
 /* ===========================
-   GENERAL STYLES
+   MOBILE FULL-WIDTH MENU
 =========================== */
 
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
-    scroll-behavior: smooth;
+#mobile-menu {
+    display: none;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
 }
 
-/* Navbar spacing */
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Buttons */
-.btn-primary {
-    transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+.mobile-full-menu > li > a {
+    padding: 15px;
+    font-size: 18px;
 }
 
 /* ===========================
-   HERO SECTION
+   TALL SECTION
 =========================== */
 
-.hero {
-    animation: fadeIn 1.2s ease-in-out;
+.tall-section {
+    background-color: #e2f0ff;
+    padding: 30px;
+    min-height: 1200px; /* FUERZA scroll */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===========================
-   CARDS
-=========================== */
-
-.card {
-    transition: 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.2);
-}
-
-/* ===========================
-   TABLE
-=========================== */
-
-table td, table th {
-    vertical-align: middle !important;
-}
-
-/* ===========================
-   FORM
-=========================== */
-
-form input, form textarea {
-    transition: 0.3s ease-in-out;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 10px rgba(13,110,253,0.4);
-}
-
-/* ===========================
-   BACK TO TOP BUTTON
-=========================== */
-
-#backToTop {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    background: #0d6efd;
-    color: white;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    border: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s;
-    z-index: 999;
-}
-
-#backToTop.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-10px);
-}
-
-#backToTop:hover {
-    transform: translateY(-15px);
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer {
-    background: #fff;
+/* Optional animations */
+#mobile-menu.slide {
+    display: block;
 }
