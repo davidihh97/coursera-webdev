@@ -1,0 +1,25 @@
+/* Remove default navbar margin */
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* Mobile dropdown full width background */
+.dropdown-full {
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+.dropdown-full li a {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 15px;
+}
+
+/* Huge section */
+.tall-section {
+  background-color: #f4f4f4;
+  height: 1000px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
