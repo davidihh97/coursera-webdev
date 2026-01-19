@@ -1,256 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Module 3 – Bootstrap Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food, LLC</title>
 
-    <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-    />
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <style>
-        .hero {
-            background: linear-gradient(to bottom right, #0d6efd, #4a9efd);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .feature-icon {
-            font-size: 3rem;
-            color: #0d6efd;
-        }
-        footer {
-            background: #f8f9fa;
-            padding: 30px 0;
-            margin-top: 60px;
-            text-align: center;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-<!-- ==================== NAVBAR ==================== -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Module 3</a>
+<!-- ===============================
+     NAVBAR (scrolls away, not fixed)
+================================ -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
 
-        <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse"
-                data-bs-target="#mainMenu"
-                aria-controls="mainMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+        <!-- Brand -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Food, LLC</a>
 
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Mobile button only visible on xs -->
+            <button type="button" class="navbar-toggle visible-xs" id="menu-btn">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
-        <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-                <li class="nav-item"><a href="#table-section" class="nav-link">Data</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="visible-xs">
+            <ul class="nav navbar-nav mobile-full-menu">
+                <li class="text-center"><a href="#">Chicken</a></li>
+                <li class="text-center"><a href="#">Beef</a></li>
+                <li class="text-center"><a href="#">Sushi</a></li>
             </ul>
         </div>
+
     </div>
 </nav>
 
-<!-- ==================== HERO ==================== -->
-<section class="hero">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Welcome to Module 3 Solution Project</h1>
-        <p class="lead">
-            This page demonstrates a full Bootstrap 5 layout including advanced components.
-        </p>
-        <a href="#features" class="btn btn-light btn-lg mt-3">Explore Features</a>
-    </div>
-</section>
+<!-- ===============================
+     PAGE HEADING
+================================ -->
+<div class="container">
+    <h1 class="text-center">Our Menu</h1>
+</div>
 
-<!-- ==================== FEATURES SECTION ==================== -->
-<section id="features" class="py-5">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5">Main Features</h2>
+<!-- ===============================
+     TALL SECTION USING GRID
+================================ -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 tall-section">
+            <h2 class="text-center">Welcome to Our Delicious Menu</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Vestibulum vitae gravida arcu. Vivamus id cursus lectus. 
+                Donec faucibus, justo at ullamcorper tristique, nunc lacus 
+                facilisis libero, sed fermentum ipsum lorem non odio.
+                <!-- Mucho contenido repetido para hacerlo muy alto -->
+            </p>
 
-        <div class="row g-4">
-            
-            <div class="col-md-4">
-                <div class="text-center p-4 border rounded shadow-sm">
-                    <div class="feature-icon">⚡</div>
-                    <h4 class="mt-3">Fast & Responsive</h4>
-                    <p>
-                        This template is designed using Bootstrap, ensuring full responsiveness
-                        across all devices including phones, tablets, and desktops.
-                    </p>
-                </div>
-            </div>
+            <p>
+                Mauris luctus elit ac urna maximus, non luctus libero 
+                vulputate. Nam ac nunc at sapien gravida faucibus non 
+                nec justo. Phasellus convallis elit sed libero venenatis, 
+                et tempor eros bibendum.
+            </p>
 
-            
-            <div class="col-md-4">
-                <div class="text-center p-4 border rounded shadow-sm">
-                    <div class="feature-icon">🎨</div>
-                    <h4 class="mt-3">Clean UI</h4>
-                    <p>
-                        A modern and clean user interface that follows best design practices,
-                        including spacing, typography, and accessibility.
-                    </p>
-                </div>
-            </div>
+            <p>
+                Pellentesque habitant morbi tristique senectus et netus 
+                et malesuada fames ac turpis egestas. Donec quis lorem 
+                eget arcu hendrerit viverra. Nullam varius nisl purus, 
+                id vehicula nibh mattis id. 
+            </p>
 
-            
-            <div class="col-md-4">
-                <div class="text-center p-4 border rounded shadow-sm">
-                    <div class="feature-icon">🛠️</div>
-                    <h4 class="mt-3">Easy to Customize</h4>
-                    <p>
-                        Modify colors, fonts, layout, and content with minimum effort thanks to
-                        Bootstrap’s utility classes and component structure.
-                    </p>
-                </div>
-            </div>
-
+            <p>
+                <!-- Añadimos mucho texto para forzar scroll -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                (Este párrafo se repite varias veces para crear altura)<br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+            </p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- ==================== CARDS SECTION ==================== -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5">Featured Cards</h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://picsum.photos/seed/a/600/400" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Card One</h5>
-                        <p class="card-text">
-                            This card includes an image, a title, text and a button.
-                            Useful for product displays or blog posts.
-                        </p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://picsum.photos/seed/b/600/400" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Card Two</h5>
-                        <p class="card-text">
-                            Cards allow organizing information in a structured, visually
-                            attractive way while maintaining consistency in layout.
-                        </p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <img src="https://picsum.photos/seed/c/600/400" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Sample Card Three</h5>
-                        <p class="card-text">
-                            Completely customizable: images, headers, buttons, and even
-                            animations with the help of CSS or JS.
-                        </p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== TABLE SECTION ==================== -->
-<section id="table-section" class="py-5">
-    <div class="container">
-        <h2 class="mb-4 fw-bold">Data Table Example</h2>
-        <p class="mb-4">
-            Below is an example of a responsive Bootstrap table displaying structured data.
-        </p>
-
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped text-center align-middle">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Item</th>
-                        <th>Status</th>
-                        <th>Progress</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Module Initialization</td>
-                        <td><span class="badge bg-success">Completed</span></td>
-                        <td>100%</td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Bootstrap Setup</td>
-                        <td><span class="badge bg-info">In Progress</span></td>
-                        <td>60%</td>
-                    </tr>
-                    <tr>
-                        <td>003</td>
-                        <td>JavaScript Integration</td>
-                        <td><span class="badge bg-warning text-dark">Pending</span></td>
-                        <td>0%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== CONTACT FORM ==================== -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5">Contact Form</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-
-                <form class="border p-4 rounded shadow-sm bg-white">
-                    <div class="mb-3">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" placeholder="your@email">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer>
-    <p class="mb-0">© 2026 Module 3 Project – Created with Bootstrap 5</p>
-</footer>
-
-<!-- ==================== BOOTSTRAP JS ==================== -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/app.js"></script>
 
 </body>
 </html>
